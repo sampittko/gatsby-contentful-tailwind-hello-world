@@ -6,7 +6,6 @@ module.exports = {
     defaultLineHeights: true,
     standardFontWeights: true,
   },
-  purge: [],
   theme: {
     extend: {},
   },
