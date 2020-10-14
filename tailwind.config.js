@@ -1,14 +1,15 @@
 module.exports = {
+  purge: ["./src/**/*.js"],
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
     defaultLineHeights: true,
-    standardFontWeights: true
+    standardFontWeights: true,
   },
   purge: [],
   theme: {
-    extend: {}
+    extend: {},
   },
   variants: {},
-  plugins: []
+  plugins: [],
 }
