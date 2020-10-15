@@ -16,15 +16,15 @@ const SEO = ({ title }) => (
           keywords
           description
           title
-        }
-        contentfulAuthor {
-          nickname
-          positions
-          photo {
+          image {
             file {
               url
             }
           }
+        }
+        contentfulAuthor {
+          nickname
+          positions
         }
       }
     `}
@@ -38,8 +38,8 @@ const SEO = ({ title }) => (
         }
         return `${authorPosition}, `
       })}`
-      const metaImage = `https:${data.contentfulAuthor.photo.file.url}`;
-      const metaTitle = data.contentfulSite.title;
+      const metaImage = `https:${data.contentfulSite.image.file.url}`
+      const metaTitle = data.contentfulSite.title
 
       return (
         <Helmet
