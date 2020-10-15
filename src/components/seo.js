@@ -61,7 +61,7 @@ const SEO = ({ title }) => (
             },
             {
               name: "twitter:card",
-              content: "summary",
+              content: metaDescription,
             },
             {
               name: "twitter:creator",
