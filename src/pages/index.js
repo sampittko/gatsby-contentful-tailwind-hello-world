@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
   const {
     firstName,
     lastName,
-    positions,
+    position,
     twitter,
     linkedin,
     github,
