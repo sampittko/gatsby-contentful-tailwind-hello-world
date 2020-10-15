@@ -4,14 +4,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: false,
-        develop: false,
-        tailwind: true,
-      },
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `m4176n642r8r`,
