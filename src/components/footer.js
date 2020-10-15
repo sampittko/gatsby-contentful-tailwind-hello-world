@@ -1,5 +1,5 @@
-import { graphql, StaticQuery } from 'gatsby';
-import React from 'react';
+import { graphql, StaticQuery } from "gatsby"
+import React from "react"
 
 const Footer = () => (
   <div className="absolute bottom-0 py-12 px-4 w-screen">
@@ -39,4 +39,4 @@ const Footer = () => (
   </div>
 )
 
-export default Footer;
+export default Footer

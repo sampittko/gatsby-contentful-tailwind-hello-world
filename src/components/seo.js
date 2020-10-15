@@ -98,7 +98,7 @@ const SEO = ({ title }) => (
 )
 
 SEO.defaultProps = {
-  title: ''
+  title: "",
 }
 
 SEO.propTypes = {
