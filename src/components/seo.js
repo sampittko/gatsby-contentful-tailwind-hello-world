@@ -29,13 +29,14 @@ const SEO = ({ title }) => (
       }
     `}
     render={data => {
+      const { authorPositions } = data.contentfulAuthor
       const metaDescription = `${
         data.contentfulSite.description
-      } ${metaDescription} - ${positions.map((position, i) => {
-        if (i === positions.length - 1) {
-          return position
+      } — ${authorPositions.map((authorPosition, i) => {
+        if (i === authorPositions.length - 1) {
+          return authorPosition
         }
-        return `${position}, `
+        return `${authorPosition}, `
       })}`
       const metaImage = `https:${data.contentfulAuthor.photo.file.url}`;
       const metaTitle = data.contentfulSite.title;
