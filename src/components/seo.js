@@ -19,6 +19,7 @@ const SEO = ({ title }) => (
         }
         contentfulAuthor {
           nickname
+          positions
           photo {
             file {
               url
@@ -61,7 +62,12 @@ const SEO = ({ title }) => (
             },
             {
               name: "twitter:card",
-              content: metaDescription,
+              content: `${metaDescription} - ${positions.map((position, i) => {
+                if (i === positions.length - 1) {
+                  return position
+                }
+                return `${position}, `
+              })}`,
             },
             {
               name: "twitter:creator",
