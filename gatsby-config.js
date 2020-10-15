@@ -1,8 +1,16 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://samuelpitonak.sk`
+    siteUrl: `https://samuelpitonak.sk`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true,
+        develop: false,
+        tailwind: true,
+      },
+    },
     {
       resolve: `gatsby-source-contentful`,
       options: {
