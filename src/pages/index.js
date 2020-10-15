@@ -14,7 +14,7 @@ export const pageQuery = graphql`
     contentfulAuthor {
       firstName
       lastName
-      positions
+      position
       github
       twitter
       linkedin
@@ -86,12 +86,7 @@ const IndexPage = ({ data }) => {
                             )
                           </h4>
                           <p className="text-indigo-600">
-                            {positions.map((position, i) => {
-                              if (i === positions.length - 1) {
-                                return position
-                              }
-                              return `${position}, `
-                            })}
+                            {position}
                           </p>
                         </div>
                         <div className="text-lg leading-7">

@@ -24,20 +24,12 @@ const SEO = ({ title }) => (
         }
         contentfulAuthor {
           nickname
-          positions
+          position
         }
       }
     `}
     render={data => {
-      const { positions: authorPositions } = data.contentfulAuthor
-      const metaDescription = `${
-        data.contentfulSite.description
-      } — ${authorPositions.map((authorPosition, i) => {
-        if (i === authorPositions.length - 1) {
-          return authorPosition
-        }
-        return `${authorPosition}, `
-      })}`
+      const metaDescription = `${data.contentfulSite.description} — ${data.contentfulAuthor.position}`
       const metaImage = `https:${data.contentfulSite.image.file.url}`
       const metaTitle = data.contentfulSite.title
 
