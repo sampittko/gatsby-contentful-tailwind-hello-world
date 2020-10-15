@@ -29,7 +29,7 @@ const SEO = ({ title }) => (
     `}
     render={data => {
       const metaDescription = data.contentfulSite.description
-      const metaImage = data.contentfulAuthor.photo.file.url
+      const metaImage = `https:${data.contentfulAuthor.photo.file.url}`;
       const metaTitle = data.contentfulSite.title;
 
       return (
