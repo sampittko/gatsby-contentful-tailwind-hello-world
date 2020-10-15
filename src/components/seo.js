@@ -29,7 +29,7 @@ const SEO = ({ title }) => (
       }
     `}
     render={data => {
-      const { authorPositions } = data.contentfulAuthor
+      const { positions: authorPositions } = data.contentfulAuthor
       const metaDescription = `${
         data.contentfulSite.description
       } — ${authorPositions.map((authorPosition, i) => {
