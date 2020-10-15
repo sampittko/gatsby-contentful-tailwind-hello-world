@@ -1,10 +1,13 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://samuelpitonak.sk`
+  },
   plugins: [
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: `m4176n642r8r`,
+        accessToken: `ltrEP_Q5nMcW_a748YWiU2n-OE7fN9dUPTeXPPsZWqw`,
       },
     },
     `gatsby-plugin-react-helmet`,
