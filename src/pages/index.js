@@ -85,7 +85,7 @@ const IndexPage = ({ data }) => {
                             </a>
                             )
                           </h4>
-                          <p className="text-indigo-600">
+                          <p className="text-red-700">
                             {position}
                           </p>
                         </div>
