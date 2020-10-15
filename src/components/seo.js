@@ -1,60 +1,106 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
+import PropTypes from "prop-types"
+import { StaticQuery, graphql } from "gatsby"
 
-const SEO = ({ description, lang, meta, title }) => (
-  <Helmet
-    htmlAttributes={{
-      lang,
+const SEO = ({ title }) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            siteUrl
+          }
+        }
+        contentfulSite {
+          keywords
+          description
+          title
+        }
+        contentfulAuthor {
+          nickname
+          photo {
+            file {
+              url
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      const metaDescription = data.contentfulSite.description
+      const metaImage = data.contentfulAuthor.photo.file.url
+      const metaTitle = data.contentfulSite.title;
+
+      return (
+        <Helmet
+          {...(title
+            ? {
+                titleTemplate: `%s — ${metaTitle}`,
+                title,
+              }
+            : {
+                title: metaTitle,
+              })}
+          meta={[
+            {
+              name: "description",
+              content: metaDescription,
+            },
+            {
+              property: "og:url",
+              content: data.site.siteMetadata.siteUrl,
+            },
+            {
+              property: "og:title",
+              content: title,
+            },
+            {
+              property: "og:description",
+              content: metaDescription,
+            },
+            {
+              name: "twitter:card",
+              content: "summary",
+            },
+            {
+              name: "twitter:creator",
+              content: `@${data.contentfulAuthor.nickname}`,
+            },
+            {
+              name: "twitter:title",
+              content: title,
+            },
+            {
+              name: "twitter:description",
+              content: metaDescription,
+            },
+          ].concat(
+            metaImage
+              ? [
+                  {
+                    property: "og:image",
+                    content: metaImage,
+                  },
+                  {
+                    name: "twitter:image",
+                    content: metaImage,
+                  },
+                ]
+              : []
+          )}
+        />
+      )
     }}
-    title={title}
-    meta={[
-      {
-        name: `description`,
-        content: description,
-      },
-      {
-        property: `og:title`,
-        content: title,
-      },
-      {
-        property: `og:description`,
-        content: description,
-      },
-      {
-        property: `og:type`,
-        content: `website`,
-      },
-      {
-        name: `twitter:card`,
-        content: `summary`,
-      },
-      {
-        name: `twitter:creator`,
-        content: ``,
-      },
-      {
-        name: `twitter:title`,
-        content: title,
-      },
-      {
-        name: `twitter:description`,
-        content: description,
-      },
-    ].concat(meta)}
   />
 )
 
 SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
+  title: ''
 }
 
 SEO.propTypes = {
-  description: PropTypes.string.isRequired,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default SEO

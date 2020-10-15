@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => {
                             {firstName} {lastName} (
                             <a
                               target="_blank"
-                              className="hover:text-gray-500"
+                              className="hover:text-gray-500 transition ease-in-out duration-150"
                               href={`https://google.com/search?q=${nickname}`}
                               rel="noreferrer"
                               title="Find me on the Internet"
