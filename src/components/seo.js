@@ -35,6 +35,7 @@ const SEO = ({ title }) => (
 
       return (
         <Helmet
+          htmlAttributes={{ lang: "en" }}
           {...(title
             ? {
                 titleTemplate: `%s — ${metaTitle}`,
