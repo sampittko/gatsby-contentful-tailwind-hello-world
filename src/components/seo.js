@@ -29,7 +29,14 @@ const SEO = ({ title }) => (
       }
     `}
     render={data => {
-      const metaDescription = data.contentfulSite.description
+      const metaDescription = `${
+        data.contentfulSite.description
+      } ${metaDescription} - ${positions.map((position, i) => {
+        if (i === positions.length - 1) {
+          return position
+        }
+        return `${position}, `
+      })}`
       const metaImage = `https:${data.contentfulAuthor.photo.file.url}`;
       const metaTitle = data.contentfulSite.title;
 
@@ -62,12 +69,7 @@ const SEO = ({ title }) => (
             },
             {
               name: "twitter:card",
-              content: `${metaDescription} - ${positions.map((position, i) => {
-                if (i === positions.length - 1) {
-                  return position
-                }
-                return `${position}, `
-              })}`,
+              content: metaDescription,
             },
             {
               name: "twitter:creator",
