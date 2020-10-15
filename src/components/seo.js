@@ -33,6 +33,7 @@ const SEO = ({ title }) => (
       const metaImage = `https:${data.contentfulSite.image.file.url}`
       const metaTitle = data.contentfulSite.title
       const { keywords } = data.contentfulSite
+      const metaKeywords = keywords.join(", ");
 
       return (
         <Helmet
@@ -48,12 +49,7 @@ const SEO = ({ title }) => (
           meta={[
             {
               name: "keywords",
-              content: `${keywords.map((keyword, i) => {
-                if (i === keywords.length - 1) {
-                  return keyword
-                }
-                return `${keyword}, `
-              })}`,
+              content: metaKeywords,
             },
             {
               name: "description",
