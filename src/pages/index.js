@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => {
         <div className="mx-auto py-12 px-4 max-w-screen-xl sm:px-6 lg:px-8 lg:py-24">
           <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
             <div className="space-y-5 sm:space-y-4">
-              <h1 className="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">
+              <h1 className="text-gray-900 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">
                 {boldClaim}
               </h1>
             </div>
@@ -72,11 +72,11 @@ const IndexPage = ({ data }) => {
                     <div className="sm:col-span-2">
                       <div className="space-y-4">
                         <div className="text-lg font-medium space-y-1">
-                          <p className="leading-7">
+                          <p className="leading-7 text-gray">
                             {firstName} {lastName}
                             <a
                               target="_blank"
-                              className="ml-2 text-sm font-normal text-black-600 hover:text-gray-200 bg-gray-200 hover:bg-red-700 rounded-full px-3 py-1 shadow-sm hover:shadow-lg inline-block absolute transition ease-in-out duration-150"
+                              className="ml-2 text-sm font-normal text-gray-100 hover:bg-red-800 bg-gray-900 rounded-full px-3 py-1 inline-block absolute transition ease-in-out duration-150"
                               href={`https://google.com/search?q=${nickname}`}
                               rel="noreferrer"
                               title="Find me on the Internet"
@@ -84,7 +84,7 @@ const IndexPage = ({ data }) => {
                               @{nickname}
                             </a>
                           </p>
-                          <p className="-mt-3 text-red-700">{position}</p>
+                          <p className="-mt-3 text-red-800">{position}</p>
                         </div>
                         <div className="text-lg leading-7 py-2">
                           <p className="text-gray-500">{bio}</p>

@@ -615,13 +615,13 @@ video {
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: #edf2f7;
-  background: #c53030;
+  color: #f7fafc;
+  background: #9b2c2c;
 }
 
 ::selection {
-  color: #edf2f7;
-  background: #c53030;
+  color: #f7fafc;
+  background: #9b2c2c;
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
