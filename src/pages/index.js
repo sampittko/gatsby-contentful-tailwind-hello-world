@@ -72,18 +72,17 @@ const IndexPage = ({ data }) => {
                     <div className="sm:col-span-2">
                       <div className="space-y-4">
                         <div className="text-lg leading-6 font-medium space-y-1">
-                          <p>
-                            {firstName} {lastName} (
+                          <p className="leading-7">
+                            {firstName} {lastName}
                             <a
                               target="_blank"
-                              className="hover:text-gray-500 transition ease-in-out duration-150"
+                              className="ml-2 text-sm align-baseline text-black-600 hover:text-gray-200 bg-gray-200 hover:bg-red-700 rounded-full px-3 py-1 shadow-sm hover:shadow-lg inline-block absolute"
                               href={`https://google.com/search?q=${nickname}`}
                               rel="noreferrer"
                               title="Find me on the Internet"
                             >
                               @{nickname}
                             </a>
-                            )
                           </p>
                           <p className="text-red-700">{position}</p>
                         </div>
