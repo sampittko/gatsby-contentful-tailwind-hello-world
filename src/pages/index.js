@@ -71,7 +71,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div className="sm:col-span-2">
                       <div className="space-y-4">
-                        <div className="text-lg leading-6 font-medium space-y-1">
+                        <div className="text-lg font-medium space-y-1">
                           <p className="leading-7">
                             {firstName} {lastName}
                             <a
@@ -84,7 +84,7 @@ const IndexPage = ({ data }) => {
                               @{nickname}
                             </a>
                           </p>
-                          <p className="text-red-700">{position}</p>
+                          <p className="-mt-3 text-red-700">{position}</p>
                         </div>
                         <div className="text-lg leading-7">
                           <p className="text-gray-500">{bio}</p>
