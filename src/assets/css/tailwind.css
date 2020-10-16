@@ -2,14 +2,18 @@
 
 @tailwind components;
 
-::-moz-selection { /* Code for Firefox */
-  color: #f7fafc;
-  background: #9b2c2c;
+body {
+    @apply overflow-x-hidden;
+}
+
+::-moz-selection {
+  @apply text-gray-100;
+  @apply bg-red-800;
 }
 
 ::selection {
-  color: #f7fafc;
-  background: #9b2c2c;
+  @apply text-gray-100;
+  @apply bg-red-800;
 }
 
 @tailwind utilities;
