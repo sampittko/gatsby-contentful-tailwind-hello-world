@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => {
                             {firstName} {lastName}
                             <a
                               target="_blank"
-                              className="ml-2 text-sm align-baseline text-black-600 hover:text-gray-200 bg-gray-200 hover:bg-red-700 rounded-full px-3 py-1 shadow-sm hover:shadow-lg inline-block absolute"
+                              className="ml-2 text-sm text-black-600 hover:text-gray-200 bg-gray-200 hover:bg-red-700 rounded-full px-3 py-1 shadow-sm hover:shadow-lg inline-block absolute transition ease-in-out duration-150"
                               href={`https://google.com/search?q=${nickname}`}
                               rel="noreferrer"
                               title="Find me on the Internet"
