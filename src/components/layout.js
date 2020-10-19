@@ -5,7 +5,7 @@ import Footer from "./footer"
 
 const Layout = ({ children }) => (
   <div className="relative min-h-screen pb-20 bg-gradient-to-r from-gray-100 to-red-100">
-    <main>{children}</main>
+    <main className="pb-12">{children}</main>
     <Footer />
   </div>
 )

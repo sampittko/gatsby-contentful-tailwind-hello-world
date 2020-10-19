@@ -31,7 +31,7 @@ module.exports = {
       options: {
         host: "https://samuelpitonak.sk",
         sitemap: "https://samuelpitonak.sk/sitemap.xml",
-        policy: [{ userAgent: "*", allow: "/" }],
+        policy: [{ userAgent: "*", disallow: ["/404"] }],
       },
     },
     `gatsby-plugin-postcss`,
